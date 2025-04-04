@@ -1,4 +1,4 @@
-# Markdown Extension Examples
+# Revue de code fait par Tommy sur le code de Samuel
 
 This page demonstrates some of the built-in markdown extensions provided by VitePress.
 
