@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # Revue de code fait par Tommy sur le code de Samuel
+=======
+# Revue du code de Tommy
+>>>>>>> Samuel
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+Cette revue de code a été faite par Samuel Méthot
 
 ## Syntax Highlighting
 
