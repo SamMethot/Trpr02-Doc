@@ -9,16 +9,17 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Samuel', link: '/samuel' },
-      {  text: 'Tommy', link: '/tommy' }
+      { text: 'Tommy', link: '/revue-tommy' },
+      { text: 'Samuel', link: '/revue-samuel' }
+
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Revue de code',
         items: [
-          { text: 'Revue de code de Samuel', link: '/samuel' },
-          { text: 'Revue de code de Tommy', link: '/tommy' }
+          { text: 'Revue de code de Samuel', link: '/revue-samuel' },
+          { text: 'Revue de code de Tommy', link: '/revue-tommy' }
         ]
       }
     ],

@@ -5,13 +5,13 @@ layout: home
 hero:
   name: "Trpr02-Documentation"
   text: "La documentation du trpr02"
-  tagline: Projet fait par Samuel Méthot et Tommy Claveau
+  tagline: Fait par Tommy et Samuel
   actions:
     - theme: brand
-      text: Voir la revue de Tommy
-      link: /tommy
+      text: Revue de Tommy
+      link: /revue-tommy
     - theme: brand
-      text: Voir la revue de Samuel
-      link: /samuel
+      text: Revue de Samuel
+      link: /revue-samuel
 ---
 
