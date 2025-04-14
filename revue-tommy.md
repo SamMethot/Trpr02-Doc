@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Revue de code fait par Tommy sur le code de Samuel
-=======
 # Revue du code de Tommy
->>>>>>> Samuel
 
 Cette revue de code a été faite par Samuel Méthot
 
