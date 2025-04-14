@@ -8,10 +8,10 @@ hero:
   tagline: Fait par Tommy et Samuel
   actions:
     - theme: brand
-      text: Revue de Tommy
+      text: Revue du code de Tommy
       link: /revue-tommy
     - theme: brand
-      text: Revue de Samuel
+      text: Revue du code de Samuel
       link: /revue-samuel
 ---
 
