@@ -5,21 +5,13 @@ layout: home
 hero:
   name: "Trpr02-Documentation"
   text: "La documentation du trpr02"
-  tagline: My great project tagline
+  tagline: Fait par Tommy et Samuel
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      text: Revue du code de Tommy
+      link: /revue-tommy
+    - theme: brand
+      text: Revue du code de Samuel
+      link: /revue-samuel
 ---
 

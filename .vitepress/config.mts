@@ -4,19 +4,22 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Trpr02-Documentation",
   description: "La documentation du trpr02",
+  base: '/Trpr02-Doc/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Tommy', link: '/revue-tommy' },
+      { text: 'Samuel', link: '/revue-samuel' }
+
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Revue de code',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Revue du code de Samuel', link: '/revue-samuel' },
+          { text: 'Revue du code de Tommy', link: '/revue-tommy' }
         ]
       }
     ],
