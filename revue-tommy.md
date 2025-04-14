@@ -2,84 +2,33 @@
 
 Cette revue de code a été faite par Samuel Méthot
 
-## Syntax Highlighting
+## Setup de l'application
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+Tommy a fait l'initialisation du projet et l'initialisation du routeur a partir des commandes suivantes :
 
-**Input**
-
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
+```bash
+npm init vue@3
+npm run dev
 ```
-````
+Tommy a également ajouté des dossiers comme router, services ainsi que de modifié les dossiers pour rendre les prochaines étapes de codage plus faciles. Parfait !
 
-**Output**
+## Ajout du Navbar
 
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
+Tommy a parfaitement ajouter la Navbar dans le fichier App.vue ainsi que d'ajouter le Bootstrap dans le fichier main.ts.
+```typescript
+import NavigationBar from "./components/NavigationBar.vue";
+
+<header>
+   <div>
+     <!-- Le composant NavigationBar est affiché sur toutes les pages de l'application. Il contient des liens de navigation. Voir soncontenu dans le fichier src/components/NavigationBar.vue -->
+     <NavigationBar />
+   </div>
+</header>
 ```
 
-## Custom Containers
 
-**Input**
 
-```md
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
+```typescript
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
 ```
-
-**Output**
-
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
-
-## More
-
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
