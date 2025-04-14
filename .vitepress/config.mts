@@ -17,8 +17,8 @@ export default defineConfig({
       {
         text: 'Revue de code',
         items: [
-          { text: 'Revue de code de Samuel', link: '/revue-samuel' },
-          { text: 'Revue de code de Tommy', link: '/revue-tommy' }
+          { text: 'Revue du code de Samuel', link: '/revue-samuel' },
+          { text: 'Revue du code de Tommy', link: '/revue-tommy' }
         ]
       }
     ],
