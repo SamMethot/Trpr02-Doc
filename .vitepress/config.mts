@@ -15,7 +15,7 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Revue de code',
         items: [
           { text: 'Revue de code de Samuel', link: '/revue-samuel' },
           { text: 'Revue de code de Tommy', link: '/revue-tommy' }
