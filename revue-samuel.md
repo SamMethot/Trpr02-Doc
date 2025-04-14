@@ -1,49 +1,20 @@
----
-outline: deep
----
+# Revue du code de Tommy
 
-# Revue de code fait par Samuel sur le code de Tommy
+Cette revue de code a été faite par Samuel Méthot
 
-This page demonstrates usage of some of the runtime APIs provided by VitePress.
+## Deploiement du sit de documentation
+Samuel à c'est occupé de déployer le site de documentation et il à fait un bon travail
 
-The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
+## Création de l'interface "User" dans le dossier types
+Belle utilisation des interfaces et séparation du code 
 
-```md
-<script setup>
-import { useData } from 'vitepress'
+`
+export default interface User {
+  userName: string;
+  character: string;
+  score: number;
+}
+`
 
-const { theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
-```
-
-<script setup>
-import { useData } from 'vitepress'
-
-const { site, theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-<pre>{{ theme }}</pre>
-
-### Page Data
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-<pre>{{ frontmatter }}</pre>
-
-## More
-
-Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
+## Création du composant GameView
+Belle séparation du code bravo!
