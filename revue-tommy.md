@@ -178,3 +178,118 @@ Tommy a également importer correctement et changer quelque petites choses pour 
  }
  </style>
  ```
+
+
+# Revue du code de Tommy #3
+
+Ceci est la troisième revue du code de tommy fait par Samuel Méthot.
+
+## Ajout d'un utilisateur dans la base de données pour le classement
+
+Tommy a fait une excellente fonction pour ajouter un utilisateur dans la base de données. Parcontre plus tard il avait eu un problème d'ajout que j'ai dû "fix", mais a part de cela, il était proche à arriver au but. Bravo !
+
+```typescript
+async function addUser() {
+   isLoading.value = true;
+   if (!user.credit) return;
+   try {
+     await gameServices.postRanking({ name: user.userName, score: user.credit });
+     router.push({ name: "Game" });
+   } catch (error) {
+     console.error(
+       "Impossible de mettre à jour la publication. Erreur",
+ 
+       (error as any)?.response?.status
+     );
+   } finally {
+     isLoading.value = false;
+   }
+ }
+ ```
+
+## Affichage du score et changement de mission
+
+Tommy a fait un bon commencement de code pour faire le changement de mission. Nous avons dû changer bien évidemment la fonction pour introduire d'autre fonctionnalité, mais sinon il a fait une bonne "job" ! De plus, tommy a fait l'affichage du score à la fin de la partie, il manquait un peut de boostrap et de css, mais l'ajout est parfait ! Bravo !
+
+Affichage du score :
+```typescript
+  <div v-if="isGameOver">
+     <p>Vous avez fait un score de {{ user.credit }}</p>
+     <button>Voir le classement</button>
+   </div>
+   <Loading :active="isLoading" />
+```
+
+Changement de mission :
+```typescript
+const skipFight = () => {
+   if (nbOponentFought.value < NB_ENEMIES) nbOponentFought.value++;
+   else {
+     isGameOver.value = true;
+   }
+ };
+ ```
+
+## Début de test sur le login 
+
+Tommy a commencer les test et ils marchent fabuleusement et un bon commencement pour les test ! Bravo Tommy !
+
+```typescript
+import { describe, it, expect } from "vitest";
+ import { mount } from "@vue/test-utils";
+ import Login from "../Login.vue";
+ 
+ describe("Login.vue", () => {
+   it("Par défaut, le champ pour le nom est vide", async () => {
+     const wrapper = mount(Login);
+     const input = await wrapper.find('input[type="text"]');
+ 
+     expect((input.element as HTMLInputElement).value).toBe(""); //Assert inspiré de chatgpt
+   });
+ 
+   it("Par défaut, le champ pour le vaisseau", async () => {
+     const wrapper = mount(Login, {
+       props: {
+         isCharacterCreated: false,
+         userName: "",
+         shipName: "",
+       },
+     });
+ 
+     const select = wrapper.find("select");
+ 
+     expect((select.element as HTMLSelectElement).value).toBe(""); //Assert inspiré de chatgpt
+   });
+ });
+ ```
+
+ ## La composantes Login
+
+ Tommy a faite une bonne composantes qui est presque parfaite. En effet, la seul chose que je puissent penser changer et le nom de la fonction addUser, car elle ne fait pas vraiment ce quelle est supposer faire si c'est pour ajouter un utilisateur. Je crois qu'un changement de nom ferrais en sorte que cette composante soit réellement parfaite. Bref, Tommy, vous avez faite un bon travail !
+
+```typescript
+ async function addUser() {
+  try {
+    emit("update:isCharacterCreated", true);
+    router.push({
+      name: "Welcome",
+    });
+  } catch (error) {
+    console.error(
+      "Impossible de mettre à jour la publication. Erreur",
+      (error as any)?.response?.status
+    );
+  }
+}
+```
+
+## La composante StartGame
+
+Tommy a fait un excellent travail au niveau du commencement du jeu et les seules changements qui pourrait être apporter pour améliorer le code et de supprimer les imports et la variable inutilisée. En effet, la variable route n'est pas utilisée, l'import "Loading" n'est pas utilisé et le onMounted n'est pas utilisé. Bref, a part de cela, je crois qu'aucune autre modification pourrait améliorer le code. Bravo Tommy !
+
+```typescript
+import Loading from "vue-loading-overlay";
+import { ref, onMounted } from "vue";
+
+const route = useRoute();
+```
